@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Una revista digital para descubrir nuevas ideas, tendencias e inspiración.">
+
+    <title>ÉDITION — Revista Digital</title>
+
+    <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicon-16x16.png" type="image/png">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO Y MENÚ -->
+    <header class="header" id="inicio">
+        <a href="#inicio" class="logo">ÉDITION<span>.</span></a>
+
+        <button class="menu-toggle" id="menu-toggle"
+                aria-label="Abrir menú" aria-expanded="false"
+                aria-controls="nav">
+            ☰
+        </button>
+
+        <nav class="nav" id="nav">
+            <a href="#inicio">Inicio</a>
+            <a href="#revista">La revista</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">CULTURA · ARTE · INSPIRACIÓN</p>
+
+                <h1>Una nueva forma<br>de mirar el mundo.</h1>
+
+                <p class="hero-description">
+                    Historias, imágenes e ideas para quienes encuentran
+                    belleza en los detalles.
+                </p>
+
+                <a href="#revista" class="button button-dark">
+                    Explorar la revista ↗
+                </a>
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1400&q=85"
+                    alt="Instalación artística en un espacio de exposición">
+                <span class="image-caption">NUEVAS PERSPECTIVAS — VOL. 01</span>
+            </div>
+
+            <span class="hero-number">01 / 2026</span>
+        </section>
+
+        <!-- CARRUSEL EDITORIAL -->
+        <section class="magazine section" id="revista">
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">NUESTRA SELECCIÓN</p>
+                    <h2>Pasá de página.</h2>
+                </div>
+
+                <p class="section-description">
+                    Un recorrido visual por historias que merecen
+                    ser descubiertas.
+                </p>
+            </div>
+
+            <div class="magazine-frame">
+
+                <div class="magazine-track" id="magazine-track">
+
+                    <!-- PÁGINA 1 -->
+                    <article class="magazine-slide active">
+                        <div class="slide-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=85"
+                                alt="Arte y cultura contemporánea">
+                            <span class="slide-number">01</span>
+                        </div>
+
+                        <div class="slide-content">
+                            <p class="eyebrow">01 — CULTURA</p>
+                            <h3>El arte de observar.</h3>
+                            <p>
+                                Mirar más allá de lo evidente.
+                                Encontrar historias en los espacios,
+                                las formas y los pequeños detalles.
+                            </p>
+                            <a href="#contacto" class="text-link">
+                                Descubrí más ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PÁGINA 2 -->
+                    <article class="magazine-slide">
+                        <div class="slide-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85"
+                                alt="Moda y estilo editorial">
+                            <span class="slide-number">02</span>
+                        </div>
+
+                        <div class="slide-content">
+                            <p class="eyebrow">02 — ESTILO</p>
+                            <h3>Vestir una idea.</h3>
+                            <p>
+                                La moda como lenguaje personal:
+                                identidad, experimentación y libertad
+                                para crear algo propio.
+                            </p>
+                            <a href="#contacto" class="text-link">
+                                Descubrí más ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PÁGINA 3 -->
+                    <article class="magazine-slide">
+                        <div class="slide-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85"
+                                alt="Espacio creativo de trabajo">
+                            <span class="slide-number">03</span>
+                        </div>
+
+                        <div class="slide-content">
+                            <p class="eyebrow">03 — CREATIVIDAD</p>
+                            <h3>Ideas en movimiento.</h3>
+                            <p>
+                                Proyectos, procesos y nuevas maneras
+                                de transformar la imaginación
+                                en algo tangible.
+                            </p>
+                            <a href="#contacto" class="text-link">
+                                Descubrí más ↗
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- CONTROLES DEL CARRUSEL -->
+                <div class="carousel-controls">
+                    <button id="prev" class="arrow"
+                            aria-label="Página anterior">
+                        ←
+                    </button>
+
+                    <div class="carousel-status">
+                        <span id="current-slide">01</span>
+                        <span class="status-line"></span>
+                        <span id="total-slides">03</span>
+                    </div>
+
+                    <button id="next" class="arrow"
+                            aria-label="Página siguiente">
+                        →
+                    </button>
+                </div>
+
+                <div class="carousel-dots" id="carousel-dots"
+                     aria-label="Seleccionar página"></div>
+
+            </div>
+        </section>
+
+        <!-- PRESENTACIÓN -->
+        <section class="about section" id="nosotros">
+            <div class="about-label">
+                <p class="eyebrow">NUESTRA FILOSOFÍA</p>
+                <span class="decorative-star">✳</span>
+            </div>
+
+            <div class="about-content">
+                <h2>Las mejores historias<br>nos hacen <em>sentir.</em></h2>
+
+                <p>
+                    ÉDITION es un espacio para explorar el arte,
+                    la cultura, el diseño y las personas que
+                    transforman nuestra manera de ver el mundo.
+                </p>
+
+                <a href="#contacto" class="text-link">
+                    Conocé nuestro universo ↗
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTACTO Y REDES -->
+        <section class="contact section" id="contacto">
+            <p class="eyebrow">SIGAMOS EN CONTACTO</p>
+
+            <h2>Las buenas ideas<br>se <em>comparten.</em></h2>
+
+            <p>
+                ¿Tenés una propuesta, un proyecto o una historia
+                para compartir con nosotros?
+            </p>
+
+            <div class="social-links">
+                <!-- Reemplazá los enlaces por los tuyos -->
+                <a
+                    href="https://wa.me/5493400000000"
+                    class="button button-light"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    WhatsApp ↗
+                </a>
+
+                <a
+                    href="https://www.instagram.com/zeta.fire/"
+                    class="button button-outline"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Instagram ↗
+                </a>
+
+                <a
+                    href="agustinajzeta@gmail.com"
+                    class="button button-outline">
+                    Email ↗
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <a href="#inicio" class="logo">ÉDITION<span>.</span></a>
+        <p>Una mirada diferente sobre el mundo.</p>
+        <p class="copyright">© 2026 ÉDITION. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
